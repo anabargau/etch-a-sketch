@@ -1,0 +1,112 @@
+:root{
+    --grid-cols : 1;
+    --grid-rows : 1;
+}
+*{
+    background-color: lightgrey;
+    
+}
+div{
+    font-family: 'Roboto';
+    font-weight: 300;
+    
+}
+
+#grid-container{ 
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    height: 500px;
+    width: 500px;  
+}
+.grid-item{
+    background-color: white;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    
+}
+#flex-container{
+    height: auto;
+    width: 500px;
+    display: flex;
+    justify-content: space-between; 
+}
+button{
+    border-radius: 20px;
+    width: 80px;
+    background-color: rgb(36, 30, 75);
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    opacity: 0.6;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+button:hover{
+    opacity: 1;
+    transform:scale(1.1,1.1);
+    -webkit-transform:scale(1.1,1.1);
+    -moz-transform:scale(1.1,1.1);
+    
+}    
+#color-picker{
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   background-color: transparent;
+   width: 50px;
+   height: 50px;
+   border: none;
+   cursor: pointer;
+}
+#color-picker::-webkit-color-swatch{
+    border-radius: 50%;
+}
+#value-range{
+    cursor: pointer;
+}
+h1{
+    font-family: "Pacifico", cursive;
+    font-weight: 300;
+    font-size: 60px;
+}
+input[type = "image"]{
+    border-radius: 50%;
+    width: 80px;
+    height: 50px;
+    transition-timing-function: ease-in-out;
+    transition: 00.3s;
+}
+input[type = "image"]:hover{
+    filter: brightness(0.25);
+    transform:scale(1.1,1.1);
+    -webkit-transform:scale(1.1,1.1);
+    -moz-transform:scale(1.1,1.1);
+}
+button:active{
+  background-color: rgb(36, 30, 75);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+input[type = "image"]:active{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  filter: brightness(0.25);
+}
+#range{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pressed{
+    filter: brightness(0.25);
+   
+}
